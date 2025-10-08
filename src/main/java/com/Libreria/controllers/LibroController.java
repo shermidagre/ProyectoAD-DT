@@ -25,4 +25,12 @@ public class LibroController {
             logger.info("-----------------------\nLibro creado exitosamente: {}\n-----------------------", libroGuardado);
             return ResponseEntity.ok(libroGuardado);
     }
+
+    @getMapping("/borrar")
+    public ResponseEntity<String> borrarLibro(@PathVariable Long id) {
+            logger.info("-----------------------\nRecibido request para borrar libro con id: {}\n-----------------------", id);
+            libroService.eliminarLibro(id);
+            logger.info("-----------------------\nLibro borrado exitosamente\n-----------------------");
+            return ResponseEntity.ok("Libro borrado exitosamente");
+    }
 }

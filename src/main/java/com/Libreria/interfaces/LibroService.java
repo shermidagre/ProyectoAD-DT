@@ -5,5 +5,5 @@ import com.Libreria.entities.Libro;
 
 public interface LibroService {
     Libro guardarLibro(Libro libro);
-    Libro eliminarLibro(Long id);
+    Libro borrarLibro(Long id);
 }
